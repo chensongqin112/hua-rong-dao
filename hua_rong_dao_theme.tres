@@ -1,0 +1,39 @@
+[gd_resource type="Theme" format=3 uid="uid://doi2j0iv0vup7"]
+
+[ext_resource type="FontFile" uid="uid://dyk4iwjn8jw7v" path="res://assets/fonts/BRITANIC.TTF" id="1_lswbi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wk8m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5eqa"]
+bg_color = Color(0.30980393, 0.30980393, 0.30980393, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lswbi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3sh2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kmmb"]
+
+[sub_resource type="FontVariation" id="FontVariation_6wk8m"]
+
+[resource]
+default_font = SubResource("FontVariation_6wk8m")
+default_font_size = 24
+Button/colors/font_color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+Button/colors/font_disabled_color = Color(0.9490196, 0.8627451, 0.7019608, 0.5019608)
+Button/colors/font_focus_color = Color(0.9098039, 0.98039216, 0.94509804, 1)
+Button/colors/font_hover_color = Color(0.9098039, 0.98039216, 0.94509804, 1)
+Button/colors/font_hover_pressed_color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+Button/colors/font_outline_color = Color(0.31509826, 0.7440477, 0.8493896, 1)
+Button/colors/font_pressed_color = Color(0.88018924, 0.91269696, 0.9886586, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_lswbi")
+Button/styles/hover = SubResource("StyleBoxFlat_6wk8m")
+Button/styles/normal = SubResource("StyleBoxFlat_h5eqa")
+Button/styles/pressed = SubResource("StyleBoxFlat_lswbi")
+Label/colors/font_color = Color(0.9490196, 0.8627451, 0.7019608, 0.5019608)
+Label/colors/font_outline_color = Color(0.59717613, 0.59717613, 0.5971761, 1)
+Label/fonts/font = ExtResource("1_lswbi")
+Label/styles/focus = SubResource("StyleBoxTexture_f3sh2")
+Label/styles/normal = SubResource("StyleBoxTexture_1kmmb")

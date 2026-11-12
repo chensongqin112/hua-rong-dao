@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://debaqsplyctlh"]
+
+[ext_resource type="Theme" uid="uid://doi2j0iv0vup7" path="res://hua_rong_dao_theme.tres" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://b17s3deb5ewl8" path="res://src/main_menu.gd" id="2_7vrkn"]
+
+[node name="MainMenu" type="Node2D" unique_id=1678837975]
+script = ExtResource("2_7vrkn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1811551994]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1769132390]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_06t4h")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control" unique_id=100119274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_06t4h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/CenterContainer" unique_id=931827493]
+layout_mode = 2
+
+[node name="StartGameButton" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=174693044]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=1741904896]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Options"
+
+[node name="ExitGameButton" type="Button" parent="CanvasLayer/Control/CenterContainer/VBoxContainer" unique_id=99500768]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Exit Game"

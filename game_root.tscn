@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b685wgcdtjv3f"]
+
+[ext_resource type="Script" uid="uid://c8eth5p138ele" path="res://src/root_context.gd" id="1_bxsma"]
+[ext_resource type="PackedScene" uid="uid://debaqsplyctlh" path="res://main_menu.tscn" id="2_lkrbl"]
+[ext_resource type="PackedScene" uid="uid://bxs0fn1405il0" path="res://main_board.tscn" id="3_wd1uf"]
+
+[node name="GameRoot" type="Node2D" unique_id=869728143]
+script = ExtResource("1_bxsma")
+main_menu_packed = ExtResource("2_lkrbl")
+main_board_packed = ExtResource("3_wd1uf")

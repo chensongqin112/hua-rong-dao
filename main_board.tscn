@@ -1,0 +1,392 @@
+[gd_scene format=3 uid="uid://bxs0fn1405il0"]
+
+[ext_resource type="Texture2D" uid="uid://t77vip5n6781" path="res://assets/board.png" id="1_4rgaq"]
+[ext_resource type="Script" uid="uid://2pltrkfvc2vd" path="res://src/main_board.gd" id="1_ufl0o"]
+[ext_resource type="Texture2D" uid="uid://ygfgh61mf1yu" path="res://assets/caocao.png" id="2_s3r4q"]
+[ext_resource type="Texture2D" uid="uid://wkcac85al52u" path="res://assets/zhangfei.png" id="3_qnik1"]
+[ext_resource type="Texture2D" uid="uid://djrsaulrn7p7x" path="res://assets/zhaoyun.png" id="4_y0iwf"]
+[ext_resource type="Texture2D" uid="uid://dyrib3c0wjq0o" path="res://assets/machao.png" id="5_k4kov"]
+[ext_resource type="Texture2D" uid="uid://28xnymgnjr6m" path="res://assets/huangzhong.png" id="6_mfawl"]
+[ext_resource type="Texture2D" uid="uid://bhpc1bldsidgm" path="res://assets/guanyu.png" id="7_yy8w8"]
+[ext_resource type="Script" uid="uid://cvvhjy7geoepl" path="res://src/piece.gd" id="8_d85lv"]
+[ext_resource type="Texture2D" uid="uid://bgwawpefj1n5w" path="res://assets/pawn.png" id="8_nc5lu"]
+[ext_resource type="Script" uid="uid://bf7ao2mi87s5" path="res://src/board_background.gd" id="10_5hus0"]
+[ext_resource type="Theme" uid="uid://doi2j0iv0vup7" path="res://hua_rong_dao_theme.tres" id="12_ufl0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1yln"]
+size = Vector2(400, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d85lv"]
+size = Vector2(200, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hus0"]
+size = Vector2(200, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufl0o"]
+size = Vector2(200, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sh2"]
+size = Vector2(200, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmbrf"]
+size = Vector2(400, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37iyn"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kmmb"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10vr4"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uev50"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eqf7"]
+size = Vector2(9, 1020)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqex7"]
+size = Vector2(9, 1020)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ughxs"]
+size = Vector2(820, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alniq"]
+size = Vector2(820, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwp3b"]
+size = Vector2(800, 1000)
+
+[node name="MainBoard" type="Node2D" unique_id=1678731909]
+script = ExtResource("1_ufl0o")
+
+[node name="CaoCaoPiece" type="CharacterBody2D" parent="." unique_id=1116746308]
+z_index = 20
+position = Vector2(378, 173)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"cao_cao"
+
+[node name="CaoCaoImage" type="Sprite2D" parent="CaoCaoPiece" unique_id=1047704379]
+z_index = 20
+texture = ExtResource("2_s3r4q")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="CaoCaoPiece" unique_id=1398729060]
+z_index = 10
+shape = SubResource("RectangleShape2D_y1yln")
+
+[node name="ZhangFeiPiece" type="CharacterBody2D" parent="." unique_id=420753361]
+z_index = 20
+position = Vector2(168.00002, 173)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"zhang_fei"
+
+[node name="ZhangFeiImage" type="Sprite2D" parent="ZhangFeiPiece" unique_id=1285436627]
+z_index = 20
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_qnik1")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="ZhangFeiPiece" unique_id=1932407133]
+z_index = 10
+shape = SubResource("RectangleShape2D_d85lv")
+
+[node name="ZhaoYunPiece" type="CharacterBody2D" parent="." unique_id=79001627]
+z_index = 20
+position = Vector2(588, 173)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"zhao_yun"
+
+[node name="ZhaoYunImage" type="Sprite2D" parent="ZhaoYunPiece" unique_id=2015671666]
+z_index = 20
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_y0iwf")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="ZhaoYunPiece" unique_id=665061300]
+z_index = 10
+shape = SubResource("RectangleShape2D_5hus0")
+
+[node name="MaChaoPiece" type="CharacterBody2D" parent="." unique_id=899901333]
+z_index = 20
+position = Vector2(168.00002, 453)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"ma_chao"
+
+[node name="MaChaoImage" type="Sprite2D" parent="MaChaoPiece" unique_id=2100379922]
+z_index = 20
+texture = ExtResource("5_k4kov")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="MaChaoPiece" unique_id=1386547427]
+z_index = 10
+shape = SubResource("RectangleShape2D_ufl0o")
+
+[node name="HuangZhongPiece" type="CharacterBody2D" parent="." unique_id=488679064]
+z_index = 20
+position = Vector2(588, 453)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"huang_zhong"
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="HuangZhongPiece" unique_id=1016919598]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_f3sh2")
+
+[node name="HuangZhongImage" type="Sprite2D" parent="HuangZhongPiece" unique_id=148576423]
+z_index = 20
+texture = ExtResource("6_mfawl")
+
+[node name="GuanYuPiece" type="CharacterBody2D" parent="." unique_id=895755897]
+z_index = 20
+position = Vector2(378, 383)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"guan_yu"
+
+[node name="GuanYuImage" type="Sprite2D" parent="GuanYuPiece" unique_id=1649090012]
+z_index = 20
+texture = ExtResource("7_yy8w8")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="GuanYuPiece" unique_id=1989527593]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_tmbrf")
+
+[node name="Pawn1Piece" type="CharacterBody2D" parent="." unique_id=1711612513]
+z_index = 20
+position = Vector2(308, 523)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"pawn_1"
+
+[node name="Pawn1" type="Sprite2D" parent="Pawn1Piece" unique_id=1154020210]
+z_index = 20
+texture = ExtResource("8_nc5lu")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="Pawn1Piece" unique_id=830578292]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_37iyn")
+
+[node name="Pawn2Piece" type="CharacterBody2D" parent="." unique_id=1712993957]
+z_index = 20
+position = Vector2(448, 523)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"pawn_2"
+
+[node name="Pawn2" type="Sprite2D" parent="Pawn2Piece" unique_id=9350756]
+z_index = 20
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_nc5lu")
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="Pawn2Piece" unique_id=1530394257]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_1kmmb")
+
+[node name="Pawn3Piece" type="CharacterBody2D" parent="." unique_id=1822318139]
+z_index = 20
+position = Vector2(168.00002, 663)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"pawn_3"
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="Pawn3Piece" unique_id=327480603]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_10vr4")
+
+[node name="Pawn3" type="Sprite2D" parent="Pawn3Piece" unique_id=319478745]
+z_index = 20
+texture = ExtResource("8_nc5lu")
+
+[node name="Pawn4Piece" type="CharacterBody2D" parent="." unique_id=1080796510]
+z_index = 20
+position = Vector2(588, 663)
+scale = Vector2(0.7, 0.7)
+input_pickable = true
+motion_mode = 1
+safe_margin = 0.001
+script = ExtResource("8_d85lv")
+piece_id = &"pawn_4"
+
+[node name="PieceHitBox" type="CollisionShape2D" parent="Pawn4Piece" unique_id=842754367]
+z_index = 10
+position = Vector2(0, -6.1035156e-05)
+shape = SubResource("RectangleShape2D_uev50")
+
+[node name="Pawn4" type="Sprite2D" parent="Pawn4Piece" unique_id=924045908]
+z_index = 20
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("8_nc5lu")
+
+[node name="BoardBackground" type="CharacterBody2D" parent="." unique_id=1769112900]
+z_index = 10
+position = Vector2(378, 383)
+scale = Vector2(0.6999999, 0.6999999)
+input_pickable = true
+motion_mode = 1
+script = ExtResource("10_5hus0")
+
+[node name="BoardBackground" type="Sprite2D" parent="BoardBackground" unique_id=2040440592]
+z_index = 10
+texture = ExtResource("1_4rgaq")
+metadata/_edit_group_ = true
+
+[node name="LeftWall" type="CollisionShape2D" parent="BoardBackground" unique_id=727898451]
+z_index = 10
+position = Vector2(-405, 0)
+shape = SubResource("RectangleShape2D_5eqf7")
+
+[node name="RightWall" type="CollisionShape2D" parent="BoardBackground" unique_id=695502562]
+z_index = 10
+position = Vector2(405, 0)
+shape = SubResource("RectangleShape2D_qqex7")
+
+[node name="TopWall" type="CollisionShape2D" parent="BoardBackground" unique_id=855810307]
+z_index = 10
+position = Vector2(0, -506)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_ughxs")
+
+[node name="BottomWall" type="CollisionShape2D" parent="BoardBackground" unique_id=84167728]
+z_index = 10
+position = Vector2(0, 506)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_alniq")
+
+[node name="AccessibleBoard" type="CollisionShape2D" parent="BoardBackground" unique_id=812865758]
+z_index = 5
+shape = SubResource("RectangleShape2D_uwp3b")
+
+[node name="Control" type="Control" parent="." unique_id=13398822]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 712.0
+offset_right = 912.0
+offset_bottom = 512.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("12_ufl0o")
+
+[node name="NumMovesLabel" type="Label" parent="Control" unique_id=1042434675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -11.5
+offset_right = 27.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Moves:    "
+
+[node name="EndGameButton" type="Button" parent="Control" unique_id=1025065710]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = 112.0
+offset_right = 67.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "End Game"
+
+[node name="UndoButton" type="Button" parent="Control" unique_id=320869482]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = 32.0
+offset_right = 67.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Undo Move"
+
+[node name="RedoButton" type="Button" parent="Control" unique_id=1732247021]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = 72.0
+offset_right = 67.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Redo Move"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=462808511]
+
+[node name="GameEndWindow" type="Window" parent="CanvasLayer" unique_id=46758338]
+unique_name_in_owner = true
+oversampling_override = 1.0
+title = "Game Status"
+position = Vector2i(312, 184)
+size = Vector2i(400, 200)
+visible = false
+unresizable = true
+always_on_top = true
+popup_window = true
+theme = ExtResource("12_ufl0o")
+
+[node name="GameWinResultLabel" type="Label" parent="CanvasLayer/GameEndWindow" unique_id=830260555]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You've Won The Game!"
